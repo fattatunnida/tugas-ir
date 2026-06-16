@@ -1,0 +1,31 @@
+{
+  "version": 2,
+  "framework": "laravel",
+  "functions": {
+    "api/index.php": {
+      "runtime": "php:8.2",
+      "memory": 3008,
+      "maxDuration": 30
+    }
+  },
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/api/index.php",
+      "methods": ["GET", "POST", "PUT", "DELETE", "PATCH", "OPTIONS"]
+    }
+  ],
+  "env": {
+    "APP_ENV": "production",
+    "APP_DEBUG": "false",
+    "APP_NAME": "IR Search Engine",
+    "APP_URL": "@APP_URL",
+    "CACHE_DRIVER": "array",
+    "SESSION_DRIVER": "cookie",
+    "QUEUE_CONNECTION": "sync",
+    "LOG_CHANNEL": "stack"
+  },
+  "buildCommand": "composer install --prefer-dist --optimize-autoloader && php artisan config:cache",
+  "installCommand": "composer install --prefer-dist --optimize-autoloader --no-interaction --no-dev",
+  "nodeVersion": "18.x"
+}
