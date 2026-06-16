@@ -26,6 +26,5 @@
     "LOG_CHANNEL": "stack"
   },
   "buildCommand": "composer install --prefer-dist --optimize-autoloader && php artisan config:cache",
-  "installCommand": "composer install --prefer-dist --optimize-autoloader --no-interaction --no-dev",
-  "nodeVersion": "18.x"
+  "installCommand": "composer install --prefer-dist --optimize-autoloader --no-interaction --no-dev"
 }
